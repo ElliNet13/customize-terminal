@@ -3,6 +3,7 @@
 
 ![Made with Electron](https://img.shields.io/badge/Made_with-Electron-blue?style=flat&logo=electron)
 ![Uses pnpm](https://img.shields.io/badge/Uses-pnpm-orange?style=flat&logo=pnpm)
+![GitHub last commit](https://img.shields.io/github/last-commit/ElliNet13/customize-terminal)
 
 Work in progress!
 
