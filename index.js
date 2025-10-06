@@ -87,7 +87,7 @@ function createTerminalWindow() {
     },
   });
 
-  const shell = os.platform() === 'win32' ? process.env.ComSpec : process.env.SHELL;
+  const shell = os.platform() === 'win32' ? windowsTerminalPreference() : process.env.SHELL;
   const ptyProcess = pty.spawn(shell, [], {
     name: 'xterm-color',
     cols: 80,
