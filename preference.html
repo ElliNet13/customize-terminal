@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Terminal</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 30px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Select your preferred terminal:</h2>
+  <button onclick="choose('cmd')">CMD</button><br>
+  <button onclick="choose('powershell')">PowerShell</button><br>
+  <button onclick="choose('wsl')">WSL</button><br>
+  <input type="text" id="customPath" placeholder="Custom terminal path" style="width: 300px; margin-top: 20px;">
+  <button onclick="choose(document.getElementById('customPath').value)">Custom</button>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+    function choose(choice) {
+      ipcRenderer.send('terminal-choice', choice);
+    }
+
+    ipcRenderer.on('error', (event, message) => {
+      alert(message);
+    });
+  </script>
+</body>
+</html>

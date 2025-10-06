@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - electron
+  - node-pty
+  - node-pty-prebuilt-multiarch
